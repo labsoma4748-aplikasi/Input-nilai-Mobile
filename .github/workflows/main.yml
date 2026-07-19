@@ -21,11 +21,11 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    # Langkah "chmod +x gradlew" SAYA HAPUS di sini
 
     - name: Build with Gradle (Debug APK)
-      run: ./gradlew assembleDebug
+      # Menggunakan perintah 'gradle' bawaan server, BUKAN './gradlew'
+      run: gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
