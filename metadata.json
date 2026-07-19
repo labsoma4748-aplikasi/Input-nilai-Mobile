@@ -1,0 +1,6 @@
+{
+  "name": "Input Nilai IMDA",
+  "description": "Aplikasi Input Nilai IMDA Tsanawiyah untuk mengelola data nilai, cek alpa, data induk siswa, manajemen tugas guru, dan analisa pencapaian akademik murid secara offline-first dengan integrasi Google Sheet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
