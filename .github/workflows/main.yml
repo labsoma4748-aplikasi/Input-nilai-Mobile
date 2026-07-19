@@ -21,10 +21,12 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    # Langkah "chmod +x gradlew" SAYA HAPUS di sini
+    # --- KODE BARU: Membuat debug.keystore sementara secara otomatis ---
+    - name: Generate Dummy Keystore
+      run: |
+        keytool -genkeypair -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=ID"
 
     - name: Build with Gradle (Debug APK)
-      # Menggunakan perintah 'gradle' bawaan server, BUKAN './gradlew'
       run: gradle assembleDebug
 
     - name: Upload APK
